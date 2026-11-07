@@ -1,0 +1,94 @@
+:root{--navy:#0b2a5b;--navy-d:#071a3a;--navy-l:#16407f;--yellow:#ffc933;--yellow-d:#e6ae12;--ink:#1e293b;--mut:#64748b;--line:#e2e8f0;--bg:#f4f6fb;--bad:#dc2626}
+*{box-sizing:border-box}
+body{margin:0;font-family:Poppins,"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:var(--navy);text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+
+/* Navbar */
+.nav{background:var(--navy);position:sticky;top:0;z-index:10;box-shadow:0 4px 18px rgba(7,26,58,.3)}
+.nav-in{display:flex;justify-content:space-between;align-items:center;height:68px}
+.brand{font-weight:800;font-size:22px;color:#fff;letter-spacing:.3px}
+.brand span{color:var(--yellow)}
+.menu{display:flex;align-items:center;gap:22px}
+.menu a{color:#dbe6ff;font-weight:500;font-size:15px}
+.menu a:hover{color:var(--yellow)}
+.menu form{margin:0}
+.user{color:#fff;font-size:14px;opacity:.85}
+
+/* Buttons */
+.btn{display:inline-block;border:0;cursor:pointer;font:600 14px/1 inherit;padding:12px 22px;border-radius:99px;background:var(--yellow);color:var(--navy-d);transition:.2s}
+.btn:hover{background:var(--yellow-d);transform:translateY(-1px);color:var(--navy-d)}
+.btn-navy{background:var(--navy);color:#fff}.btn-navy:hover{background:var(--navy-l);color:#fff}
+.btn-o{background:transparent;color:var(--navy);border:2px solid var(--navy)}.btn-o:hover{background:var(--navy);color:#fff}
+.btn-d{background:var(--bad);color:#fff}.btn-d:hover{background:#b91c1c;color:#fff}
+.btn-sm{padding:8px 16px;font-size:13px}
+.btn-block{width:100%;padding:14px}
+
+/* Hero */
+.hero{background:linear-gradient(rgba(7,26,58,.86),rgba(11,42,91,.9)),url('../img/bg-kota.jpg') center/cover,var(--navy);color:#fff;text-align:center;padding:110px 0 120px}
+.hero h1{font-size:56px;margin:0 0 12px;letter-spacing:-1px}
+.hero h1 span{color:var(--yellow)}
+.hero p{max-width:600px;margin:0 auto 32px;font-size:18px;color:#cfdcf6}
+.hero .acts{display:flex;gap:14px;justify-content:center}
+
+/* Page header */
+.page-h{background:linear-gradient(rgba(7,26,58,.88),rgba(11,42,91,.9)),url('../img/bg-kota.jpg') center/cover,var(--navy);color:#fff;padding:46px 0}
+.page-h .container{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.page-h h1{margin:0;font-size:30px}.page-h p{margin:4px 0 0;color:#cfdcf6}
+.page{padding:40px 0 80px}
+
+/* Alerts */
+.alert{padding:14px 18px;border-radius:12px;margin-bottom:24px;font-weight:500;background:#fff7d6;color:#7a5a00;border-left:5px solid var(--yellow)}
+
+/* Cards */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.ide-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 8px 24px -12px rgba(11,42,91,.35);transition:.25s;display:flex;flex-direction:column}
+.ide-card:hover{transform:translateY(-5px);box-shadow:0 18px 36px -14px rgba(11,42,91,.45)}
+.ide-card img{width:100%;height:190px;object-fit:cover}
+.ide-body{padding:20px;display:flex;flex-direction:column;flex:1}
+.chip{display:inline-block;background:var(--navy);color:var(--yellow);font-size:12px;font-weight:600;padding:4px 12px;border-radius:99px;align-self:flex-start}
+.ide-body h3{margin:12px 0 6px;font-size:18px;color:var(--navy)}
+.ide-body p{margin:0 0 14px;color:var(--mut);font-size:14px;flex:1}
+.meta{font-size:12px;color:var(--mut);margin-bottom:14px}
+.acts-r{display:flex;gap:8px;flex-wrap:wrap}
+.acts-r form{margin:0}
+.empty{text-align:center;padding:70px 20px;color:var(--mut);background:#fff;border-radius:18px}
+
+/* Forms */
+.panel{background:#fff;border-radius:18px;padding:34px;box-shadow:0 10px 30px -18px rgba(11,42,91,.4)}
+.narrow{max-width:760px;margin:0 auto}
+.fg{margin-bottom:20px}
+.fg label{display:block;font-weight:600;font-size:14px;margin-bottom:6px;color:var(--navy)}
+.fg input,.fg select,.fg textarea{width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:12px;font:inherit;background:#fff}
+.fg input:focus,.fg select:focus,.fg textarea:focus{outline:0;border-color:var(--navy);box-shadow:0 0 0 4px rgba(255,201,51,.35)}
+.is-err{border-color:var(--bad)!important}
+.err{color:var(--bad);font-size:13px;margin-top:5px}
+.hint{color:var(--mut);font-size:13px;margin-top:5px}
+.preview{width:180px;height:120px;object-fit:cover;border-radius:10px;margin-bottom:10px;border:1px solid var(--line)}
+.file-now{background:var(--bg);border-radius:10px;padding:10px 14px;font-size:14px;margin-bottom:10px}
+
+/* Auth */
+.auth-wrap{min-height:calc(100vh - 68px);display:grid;place-items:center;padding:40px 16px;background:linear-gradient(rgba(7,26,58,.88),rgba(11,42,91,.92)),url('../img/bg-kota.jpg') center/cover,var(--navy)}
+.auth-box{background:#fff;border-radius:20px;padding:36px;width:100%;max-width:440px}
+.auth-box h2{margin:0 0 4px;color:var(--navy)}
+.remember{display:flex;align-items:center;gap:8px;font-size:14px;margin-bottom:18px}
+.remember input{width:auto}
+.alt{text-align:center;margin-top:18px;font-size:14px;color:var(--mut)}
+
+/* Detail */
+.detail{display:grid;grid-template-columns:1.1fr .9fr;gap:30px}
+.detail .cover{width:100%;border-radius:18px;max-height:420px;object-fit:cover}
+.detail h2{margin:12px 0 6px;color:var(--navy);font-size:28px}
+.doc-box{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;background:#fff7d6;border:1.5px dashed var(--yellow-d);border-radius:14px;padding:16px 18px;margin-top:20px}
+.doc-box strong{display:block;color:var(--navy)}
+
+/* Pagination */
+.pg{display:flex;gap:6px;justify-content:center;margin-top:34px;flex-wrap:wrap}
+.pg a,.pg span{padding:9px 15px;border-radius:99px;font-size:14px;background:#fff;color:var(--navy);border:1px solid var(--line)}
+.pg .on{background:var(--navy);color:var(--yellow);border-color:var(--navy)}
+.pg .off{color:#cbd5e1}
+
+.footer{background:var(--navy-d);color:#8ea6d6;text-align:center;padding:26px 0;font-size:14px}
+
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.detail{grid-template-columns:1fr}.hero h1{font-size:38px}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.menu .hide-m,.user{display:none}}
